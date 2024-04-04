@@ -54,10 +54,13 @@ html {
 
 /* BEGIN NAVIGATION */
 header {
-    position: relative;
+    position: sticky;
+    top: 0;
     height: 64px;
+    width: 100%;
+    z-index: 200;
     background-color: white;
-    /* z-index: 100; */
+
 }
 header nav {
     position: relative;
