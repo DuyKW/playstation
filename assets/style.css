@@ -8,6 +8,9 @@ html {
     font-family: monospace;
     overflow-x: hidden;
 }
+.display-none {
+    display: none;
+}
 .col-5 {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -293,7 +296,7 @@ header nav .ti-search {
  
 
 }
-.slider2-contain .slider-control .buttons2 {
+.slider2-contain >.slider-control> .buttons2 {
     position: absolute;
     top: 20%;
     left: 5%;
@@ -313,7 +316,7 @@ header nav .ti-search {
     font-family: monospace;
     font-weight: bold;
     text-align: center;
-    z-index: 10;
+    z-index: 30;
     margin: 2px;
 }
 .slider2-contain .slider-control button:hover {
@@ -569,9 +572,9 @@ header nav .ti-search {
         height: 30px;
         width: 80%;
     }
-    .footer .item div.icon {
+    .footer .item div.icon img{
         
-
+        z-index: 10;
     }
     .footer .item .icon img {
        height: 30px;
@@ -645,5 +648,212 @@ header nav .ti-search {
         gap: 20px;
         
     }
+    
+
+    /* BEGIN LOOP SLIDER */
+        .loop-slider {
+            height: 1000px;
+            width: 100%;
+        }
+        .loop-slider .background-img{
+            height: 1000px;
+            width: 100%;
+            background-image: url(./contact/5.jpg);
+            background-position: center center;
+            background-size: cover;
+            filter: blur(5px);
+            position: absolute;
+            opacity: 50%;
+        }
+
+        .loop-slider .background {
+            /* position: absolute; */
+            height: 1000px;
+            position: relative;
+        }
+
+        /* BEGIN: TITLE */
+            .loop-slider .title {
+            height: 200px;
+            z-index: 2;
+            margin-top: 30px; 
+            width: 80%;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%,0);
+            }
+
+            .loop-slider .title div{
+                margin-top: 20px;
+                max-width: 650px;
+            }
+            
+            .loop-slider .title h1 {
+                
+                font-size: 3rem;
+            }
+            .loop-slider .title p {
+                font-size: 1.1rem;
+                color: #777;
+            }
+            .loop-slider .title img {
+                height: 50px;
+                position: relative;
+            }
+        /* END: TITLE */
+    
+
+        /* BEGIN SLIDER */
+            .loop-slider .slider {
+                position: relative;
+                top: 35%;
+                left: 50%;
+                transform:  translate(-50%,-50%);
+                display: flex;
+                width: 90%;
+                justify-content: space-between;
+                gap: 17px;
+                height: 550px;
+                align-items: center;
+            }
+
+            .loop-slider .slider div {
+                width: 500px;
+                height: 230px;
+                
+            }
+
+            .loop-slider .slider div> h2 {
+                display: none;
+            }
+
+
+            .loop-slider .slider img {
+                height: 100%;
+                z-index: 50;
+                box-shadow: 0 40px 50px #505050;
+                border-radius: 10px;
+                transition: ease 0.2s;
+            }
+            .loop-slider .slider img:hover {
+                transform: scale(1.02);
+                cursor: pointer;
+            }
+            
+
+            .loop-slider .slider div:nth-child(2)>*:not(img) {
+                display: block;
+                transform: scale(1.04);
+
+            }
+
+            .loop-slider .slider div:nth-child(2)>button {
+                position: relative;
+                left: 45%;
+                transform: translate(-50%,0);
+                border: none;
+                border-radius: 20px;
+                background-color: #da440d;
+                padding: 15px;
+                padding-top: 12px;
+                transition: ease-out 0.1s;
+                align-items: center;
+                margin-top: 30px;
+                z-index: 100;
+            }
+
+            .loop-slider .slider div:nth-child(2)>button:hover {
+                cursor: pointer;
+                outline: #b53d00 3px solid;
+                outline-offset: 3px;
+                background-color: #b53d00;
+               
+            }
+
+            .loop-slider .slider div:nth-child(2)>h2 {
+                margin-top: 35px;
+                text-align:center ; 
+                color: #fff;
+            }
+           
+            .loop-slider .slider div:nth-child(2)>* {
+                margin: 10px;
+                scale: 1.07;
+                transform: translateY(-5%);
+                transition: ease 0.3s;
+                
+            }
+            .loop-slider .slider div:nth-child(2) img:hover {
+                scale: 1.085;
+                transition:ease 0.2s;
+            }
+            .loop-slider .slider div:nth-child(4)>* {
+                opacity: 5%;
+            }
+
+
+        /* END SLIDER */
+        
+
+        /* BEGIN DOTS */
+            .slider div.dots {
+                /* background-color: #004599; */
+                position: absolute;
+                width: 90%;
+                height: 120px;
+            }
+
+            .dots .dots-container {
+                z-index: 10;
+                /* background-color: #1e1f24; */
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+                width: 100%;
+                position: absolute;
+                
+                transform: translate(0,-60px);
+                list-style: none;
+                
+            }
+            .dots .dots-container li {
+                height: 5px;
+                width: 30px;
+                background-color: #a4a4a4;
+                border-radius: 30px;
+            }
+            .dots > .dots-container > li.active3 {
+                background-color: #005ed5;
+            }
+
+        /* END DOTS */
+        /* BEGIN BUTTONS */
+        .loop-slider >.background > .buttons3 {
+            position: absolute;
+           top: 50%;
+           width: 90%;
+           display: flex;
+           justify-content: space-between;
+           left: 6.5%;
+        }
+        .background .buttons3 > button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #097bd8;
+            color: #fff;
+            border: none;
+            font-family: monospace;
+            font-weight: bold;
+            text-align: center;
+            z-index: 30;
+            margin: 2px;
+        }
+
+        .background .buttons3 > button:hover {
+            cursor: pointer;
+            background-color: #0064b7;
+        }
+        /* END BUTTONS */
    
     
