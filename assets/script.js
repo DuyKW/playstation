@@ -172,5 +172,4 @@ function updataDot (a) {
         active3 = (active3 -1 < 0)? slider4_length : active3-1;
         dots_item1[active3].classList.add('active3');
     }
-    
 }
