@@ -90,6 +90,8 @@ header > nav > ul a {
 }
 header nav  button{
     position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
     right: 60px;
     border: none;
     background-color: #097bd8;
